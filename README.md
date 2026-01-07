@@ -14,6 +14,9 @@ Learning goals:
 
 **A word on scope and difficulty.** In this assignment, you will work with an existing nontrivial code base of a web application. We do not expect that you know all the technologies involved, but we expect some basic programming skills as a prerequisite for this course and assume that you can quickly learn the necessary skills to make changes with documentation, tutorials, StackOverflow, or various AI tools. Incrementally modifying and maintaining existing systems is far more common than developing new things from scratch. Learning new technologies, libraries and tools and troubleshooting problems are important skills and a prerequisite to be successful in this class, especially in the team project. Beyond that, this assignment is intentionally *open ended*. We provide some recommendations for technologies to use but you are free to use others. 
 
+## Research in this Course
+_For this class, we’re conducting research on student outcomes. This research will involve your work in this course. You will not be asked to do anything above and beyond the normal learning activities and assignments that are part of this course. You are free not to participate in this research, and your participation will have no influence on your grade for this course or your academic career at CMU. If you do not wish to participate or if you are under 18 years of age, please fill in the form: https://forms.gle/zn7PQgXA12bn3phM7. Participants will not receive any compensation. The data collected as part of this research may include student grades and homework solutions. All analyses of data from participants’ coursework will be conducted after the course is over and final grades are submitted. To minimize the risk of breach of confidentiality, the data used for analysis will not contain any personal identifiers, all data will be analyzed in de-identified and presented in aggregated form. Again, this research will not affect your grades, and the professor will not know who is participating in this research study until the grades are submitted. If you have questions pertaining to your rights as a research participant, or to report concerns to this study, please contact Christina Ma (qianouma@cmu.edu)._
+
 ## Tasks
 Seemingly every software project now needs to integrate LLMs or agents, so of course you are going to introduce LLM features to your web project too. Specifically, you are going to extend [zulip](https://github.com/zulip/zulip), an open-source team collaboration tool created as a Slack replacement. 
 
@@ -70,13 +73,19 @@ The assignment is worth 100 points. We will assign credit as follows:
 
 ## Technical hints
 
+#### Setting up the project
+
 To set up the environment, follow the official [documentation](https://zulip.readthedocs.io/en/latest/development/setup-recommended.html). You will need to set up Git, GitHub, Docker and Vagrant. We recommend you develop with VScode using Remote development over SSH.
 
 For development, you can directly edit files, and changes will be automatically reflected. For changes to the frontend, you might need to reload the page. Occasionally, you might need to restart the server (`./tools/run-dev`) to see changes implemented. For more details, please refer to the [development guide](https://zulip.readthedocs.io/en/latest/development/using.html).
+
+#### Implementing new features
 
 There are many web APIs that provide access to LLMs. You will typically have to sign up for an account. Some offer the API for free for a certain number of requests or at certain low request rates, some provide free credits for students -- this is sufficient to complete the assignment. We do not recommend to try to use an LLM locally, unless that's something you want to try anyway. When we tested the assignment, we had good experiences with the [Gemini API](https://ai.google.dev) (free, no credit card required).
 
 Never commit private credentials (such as API keys) to a public Git repository. A common strategy is to write credentials into a file (e.g., `api.key`), read the key from the file at runtime, add that file to the `.gitignore` file to avoid committing it accidentally, and add instructions to the README of how to obtain a key and how write it into a file. Alternatively it is common to pass API keys as environment variables. If you accidentally commit a key and push this to a public repository, you will need to revoke the key and create a new one; if you have not yet pushed the changes you can go the nontrivial route of [rewriting the git history](https://stackoverflow.com/questions/872565/remove-sensitive-files-and-their-commits-from-git-history). When we evaluate your submission, we will use our own API keys.
 
+#### AI-assisted development
+This [tutorial](https://github.com/skills/getting-started-with-github-copilot) might be useful for getting yourself familiar with AI-assisted development if you have not used GitHub Copilot before.
 
 
