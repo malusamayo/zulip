@@ -94,7 +94,7 @@ The assignment is worth 100 points. We will assign credit as follows:
 
 Modern AI coding tools can run test and the server to catch many of their own mistakes. You might find it useful to give the coding agent also the ability to look at the generated web pages with an MCP server like [Playwright MCP](https://github.com/microsoft/playwright-mcp).  
 
-If you decide to use any forms of AI coding assistants in Visual Studio Code, we ask you to install a [usage monitoring extension]() plugin. This is purely for research purposes and will not affect your grades. With the extension installed, you will receive a report on your AI usage at the end of the semester, with recommendations on how to improve in the future.
+If you decide to use any forms of AI coding assistants in Visual Studio Code, we ask you to install a [usage monitoring extension](https://github.com/malusamayo/zulip/blob/main/VSCODE_AI_USAGE_SETUP.md) plugin. This is purely for research purposes and will not affect your grades. With the extension installed, you will receive a report on your AI usage at the end of the semester, with recommendations on how to improve in the future.
 
 
 
