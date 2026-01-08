@@ -76,7 +76,7 @@ The assignment is worth 100 points. We will assign credit as follows:
 * [ ] 20p: The report describes how message recap is implemented and we can find the corresponding implementation. An LLM was used in the implementation. The application is functional in that it generates a summary every time a user requests recap. A video is recorded showing how a user will use the feature in the user interface.
 * [ ] 20p: The report describes how topic title improver is implemented and we can find the corresponding implementation. An LLM was used in the implementation. The application is functional in that it suggests improved topic titles based on recent messages when topic drift is detected. A video is recorded showing how a user will use the feature in the user interface.
 * [ ] 10p: The report contains a section on AI use, explaining whether, which, and how AI coding tools were used. One of the following is true: (a) no AI coding tool was used when creating the solution, (b) a VSCode-based AI-coding tool was used, and the Usage Monitoring extension was installed, (c) an AI coding tool was used outside of VScode and no VSCode-based AI-coding tool was used.
-* [ ] 10p: You can convince the course staff during office hours within 2 weeks of submitting your solution that you understand your solution and have engaged in some depth with the reflection questions.
+* [ ] 20p: You can convince the course staff during office hours within 2 weeks of submitting your solution that you understand your solution and have engaged in some depth with the reflection questions.
 
 
 
