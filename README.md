@@ -81,6 +81,7 @@ The assignment is worth 100 points. We will assign credit as follows:
 ## Technical hints
 
 *Development environment setup:* To set up the environment, follow the official [documentation](https://zulip.readthedocs.io/en/latest/development/setup-recommended.html). We strongly recommend to use their documented process with Vagrant and Docker and to then develop with VScode using remote development over SSH -- this will make it much easier to set up all the dependencies. The development environment is set up such that most changes are automatically reflected in the running server (`./tools/run-dev`).
+For changes to the frontend, you might need to reload the page. Occasionally, you might need to restart the server (`./tools/run-dev`) to see changes implemented. For more details, please refer to the [development guide](https://zulip.readthedocs.io/en/latest/development/using.html).
 
 *LLM use:* There are many web APIs that provide access to LLMs. You will typically have to sign up for an account. Some offer the API for free for a certain number of requests or at certain low request rates, some provide free credits for students -- this is sufficient to complete the assignment. We do not recommend to try to use an LLM locally, unless that's something you want to try anyway. When we tested the assignment, we had good experiences with the [Gemini API](https://ai.google.dev) (free, no credit card required). You might use [LiteLLM](https://www.litellm.ai) to make it easy to switch LLMs later.
 
