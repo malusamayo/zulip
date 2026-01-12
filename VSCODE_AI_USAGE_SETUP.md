@@ -27,3 +27,6 @@ The extension requires authentication to securely upload your data.
 
 ## Tool Support
 If you run into any questions during this tool setup, post in Slack channel #copilot_archiver_support. 
+
+## Not using GitHub Copilot
+If you use AI tools other than GitHub Copilot, please collect logs of your prompts/chat history in the directory `ai_logs`. Most tools have an obvious export feature (e.g., [ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq), [Cursor](https://cursor.com/docs/agent/chat/export)).
