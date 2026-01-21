@@ -30,3 +30,86 @@ If you run into any questions during this tool setup, post in Slack channel #cop
 
 ## Not using GitHub Copilot
 If you use AI tools other than GitHub Copilot, please collect logs of your prompts/chat history in the directory `ai_logs`. Most tools have an obvious export feature (e.g., [ChatGPT](https://help.openai.com/en/articles/7925741-chatgpt-shared-links-faq), [Cursor](https://cursor.com/docs/agent/chat/export)).
+
+
+
+# FAQ
+
+## Setup & Requirements
+
+### Q: What version of VS Code do I need?
+
+A: Make sure your VS Code version is up to date (\>= **1.108**). You can check by going to `Code → About Visual Studio Code` (Mac) or `Help → About` (Windows / Linux). To update, go to `Code → Check for Updates`.  
+
+
+## Troubleshooting
+
+### Q: The extension is taking up too much disk space / my `.archiver_shadow` folder is very large.
+
+A: We identified and fixed a bug that could cause the shadow repository to grow unexpectedly. Please update to the latest version:
+
+1. Open VS Code Extensions panel (`Cmd+Shift+X` / `Ctrl+Shift+X`).  
+2. Search `“Copilot Interaction Archiver”`.  
+3. Click “Update” if available, then reload the window.
+
+After reloading, the `.archiver_shadow` folder should shrink automatically (shadow repos over 1GB are reset).  
+If the issue persists:
+
+1. Delete the `.archiver_shadow` folder in your project.  
+2. Reload the window (`Cmd+Shift+P` → `"Reload Window"`).  
+3. The extension will create a fresh, smaller repository.
+
+Still having problems? Contact us on Slack #copilot_archiver_support!
+
+### Q: I accidentally activated the extension on the wrong repository (e.g., from another class).
+
+A: You can disable the extension for that workspace:
+
+1. Open the Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`).  
+2. Search `"Copilot Archiver: Disable for this Workspace"`.  
+3. The extension will stop tracking that project.
+
+You can also delete the `.archiver_shadow` folder and the `.snapshots` folder if you want to remove the tracked data.
+
+### Q: I forgot to activate the extension on my project repository.
+
+A: Enable it by:
+
+1. Open your project folder in VS Code.  
+2. Open the Command Palette (`Cmd+Shift+P` / `Ctrl+Shift+P`).  
+3. Search `"Copilot Archiver: Enable for this Workspace"`.  
+4. The extension will start tracking your files.
+
+### Q: How do I know if the extension is working?
+
+A: Check for these signs:
+
+- On the right of VS Code status bar, you should see “⎷ Archiver: \<your\_andrew\_id\>”.  
+- A `.archiver_shadow` folder and a .snapshots folder exists in your project root.  
+- In the Output panel (View → Output), select "Copilot Archiver" from the dropdown to see logs.  
+- You should see messages like "ShadowGit: Committed..." when you save files.
+
+### Q: Will this extension affect my normal git workflow?
+
+A: No. The extension creates a separate `.archiver_shadow` folder which is automatically added to your `.gitignore`. Your main git repository is not affected.
+
+### Q: Does this track sensitive files like passwords or API keys?
+
+A: The extension automatically excludes .env files and other common sensitive file patterns. However, you should still follow best practices and never commit secrets to any repository.
+
+### Q: What happens if I work offline?
+
+A: The extension continues to track your changes locally in `.archiver_shadow`. When you're back online, it will sync to the server on the next upload cycle (every 5 minutes).  
+But if you're offline, you can't chat with Copilot anyway, so there won't be much to archive.
+
+### Q: Can I use this extension on multiple projects?
+
+A: Yes. Each project is tracked independently. Just make sure to enable the extension for each workspace where you want tracking.
+
+### Q: How do I completely uninstall the extension after class ends?
+
+A: To uninstall the extension:
+
+1. Open Extensions panel (`Cmd+Shift+X`).  
+2. Find "Copilot Interaction Archiver" and click "Uninstall".  
+3. Optionally, delete the `.archiver_shadow` and .snapshots folder from your projects.
